@@ -25,11 +25,11 @@ $fp = fopen('php://stdin', 'r');
 
 echo "Please enter the IP / Address of the server you wish to connect to.\n";
 echo "IP> ";
-$IP = fgets($fp, 1024);
+$IP = trim(fgets($fp, 1024));
 
 echo "Please enter the Port of the server you wish to connect to.\n";
 echo "Port> ";
-$Port = fgets($fp, 1024);
+$Port = trim(fgets($fp, 1024));
 
 try
 {
@@ -37,7 +37,7 @@ try
 
 	echo "Please enter the RCON Password of the server you wish to connect to.\n";
 	echo "RCON Password> ";
-	$RCONPassword = fgets($fp, 1024);
+	$RCONPassword = trim(fgets($fp, 1024));
 
 	$Query->setRconPassword($RCONPassword);
 }
